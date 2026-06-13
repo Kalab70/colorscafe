@@ -78,6 +78,36 @@ outline:none;
   white-space:nowrap;
 }
 
+.categories-outer{
+  position:relative;
+}
+
+/* LEFT fade */
+.categories-outer::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:36px;
+  background:linear-gradient(to left, transparent, #DDB500);
+  pointer-events:none;
+  z-index:1;
+}
+
+/* RIGHT fade */
+.categories-outer::after{
+  content:'';
+  position:absolute;
+  right:0;
+  top:0;
+  bottom:0;
+  width:36px;
+  background:linear-gradient(to right, transparent, #DDB500);
+  pointer-events:none;
+  z-index:1;
+}
+
 .categories button{
 border:none;
 padding:12px 20px;

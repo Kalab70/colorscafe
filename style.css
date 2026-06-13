@@ -58,11 +58,24 @@ outline:none;
 
 /* CATEGORIES */
 .categories{
-display:flex;
-gap:10px;
-padding:10px 20px;
-overflow-x:auto;
-justify-content:center;
+  display:flex;
+  gap:10px;
+  padding:10px 16px;
+  overflow-x:auto;
+  justify-content:flex-start;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.categories button{
+  flex:0 0 auto;
+  scroll-snap-align:start;
+  white-space:nowrap;
 }
 
 .categories button{
